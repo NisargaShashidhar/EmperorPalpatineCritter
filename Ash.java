@@ -3,16 +3,13 @@ import java.awt.Color;
 
 public class Ash extends Rock
 {
-    
-    
-    private static final Color DEFAULT_COLOR = Color.BLACK;
 
     /**
-     * Constructs a black ash.
+     * Constructs an ash that is the color of the image.
      */
     public Ash()
     {
-        setColor(DEFAULT_COLOR);
+        setColor(null);
     }
 
     /**
