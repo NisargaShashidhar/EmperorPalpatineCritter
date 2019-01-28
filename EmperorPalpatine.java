@@ -8,10 +8,14 @@ import info.gridworld.actor.Rock;
 
 public class EmperorPalpatine extends Critter
 {
+	public EmperorPalpatine()
+	{
+	     setColor(null);
+    }
 	public ArrayList<Actor> getActors()
 	{
 		Grid<Actor> gr = getGrid();
-		ArrayList actor = new ArrayList<Actor>();
+		ArrayList<Actor> actor = new ArrayList<Actor>();
 		Location one = getLocation();
 		Location two = one.getAdjacentLocation(getDirection());
 		while(actor.size() == 0){
@@ -43,8 +47,9 @@ public class EmperorPalpatine extends Critter
 
 		}
 		else{
-			Location loc = actors[0].getLocation();
-			actors[0].removeSelfFromGrid();
+			Grid<Actor> gr = getGrid();
+			Location loc = actors.get(0).getLocation();
+			actors.get(0).removeSelfFromGrid();
 			Ash ash = new Ash();
 			ash.putSelfInGrid(gr, loc);
 		}
