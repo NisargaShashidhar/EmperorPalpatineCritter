@@ -15,7 +15,7 @@ public class EmperorPalpatine extends Critter
 		Location one = getLocation();
 		Location two = one.getAdjacentLocation(getDirection());
 		while(actor.size() == 0){
-			if(gr.get(two).isValid() == true){
+			if(gr.isValid(two) == true){
 				Actor neighbor = gr.get(two);
 
 				if(neighbor instanceof Rock){
